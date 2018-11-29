@@ -1,0 +1,14 @@
+
+hu:
+  menu:
+    app_name: "Online könytár"
+    rentals: "Kölcsönzések"
+    search: "Keresés.."
+    search_btn: "Keresés"
+    profile:
+      my_profile: "Profilom"
+      my_profile_edit: "Profilom szerkesztése"
+      my_profile_view: "Profilom megtekintése"
+      log_out: "Kijelentkezés"
+      log_in: "Bejelentkezés"
+      sign_in: "Regisztráció"
