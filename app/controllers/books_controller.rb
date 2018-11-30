@@ -7,6 +7,8 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by(id: params[:id])
+    @next_book = Book.find_by(id: params[:id].to_i + 1)
+    @previous_book = Book.find_by(id: params[:id].to_i - 1)
   end
 
 end

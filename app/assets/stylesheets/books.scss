@@ -13,5 +13,10 @@
 }
 .card img {
   max-width: 300px;
-  margin: auto;
+  margin: 10px auto auto;
+}
+
+.container {
+  display: flex;
+  padding-top: 10px;
 }
