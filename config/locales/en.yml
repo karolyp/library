@@ -30,4 +30,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  menu:
+    app_name: "Online library"
+    books: "Books"
+    rentals: "Rentals"
+    search: "Search..."
+    search_btn: "Search"
+    profile:
+      my_profile: "My profile"
+      my_profile_edit: "Edit profile"
+      my_profile_view: "View porfile"
+      log_out: "Sign out"
+      log_in: "Sign in"
+      sign_up: "Sign up"

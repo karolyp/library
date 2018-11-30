@@ -13,5 +13,12 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
 @import "bootstrap";
+
+.devise-login {
+  margin: 10px;
+}
+
+.devise-submit {
+  margin-top: 10px;
+}

@@ -1,7 +1,7 @@
-
 hu:
   menu:
     app_name: "Online könytár"
+    books: "Könyvek"
     rentals: "Kölcsönzések"
     search: "Keresés.."
     search_btn: "Keresés"
@@ -11,4 +11,4 @@ hu:
       my_profile_view: "Profilom megtekintése"
       log_out: "Kijelentkezés"
       log_in: "Bejelentkezés"
-      sign_in: "Regisztráció"
+      sign_up: "Regisztráció"
