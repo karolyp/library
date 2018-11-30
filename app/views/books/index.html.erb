@@ -10,7 +10,7 @@
           <%= book.authors.map(&:name).join(", ")%>
         </h6>
         <p class="card-text"><%= book.description.size > @max_description_length ? (book.description[0..@max_description_length - 1] + '...').capitalize : book.description.capitalize %></p>
-        <%= link_to t('books.next'), '#', class:'btn btn-primary' %>
+        <%= link_to t('books.next'), book_path(book.id), class:'btn btn-primary' %>
       </div>
     </div>
   <% end %>

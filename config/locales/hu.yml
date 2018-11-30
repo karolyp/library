@@ -14,3 +14,7 @@ hu:
       sign_up: "Regisztráció"
   books:
     next: "Tovább"
+    book:
+      details: "Adatlap"
+      ratings: "Értékelések"
+      rental: "Kölcsönzés"

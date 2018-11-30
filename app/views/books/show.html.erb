@@ -1,0 +1,30 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to t('books.book.details'), nil, class: 'nav-link active' %>
+  </li>
+  <li class="nav-item">
+    <%= link_to t('books.book.ratings'), '#', class: 'nav-link' %>
+  </li>
+  <li class="nav-item">
+    <%= link_to t('books.book.rental'), '#', class: ['nav-link', !current_user && 'disabled'] %> <%# one-liner Ruby kokk %>
+  </li>
+</ul>
+
+<div class="card text-center book-details">
+  <div class="card-header">
+    <%= @book.authors.map(&:name).join(", ") %>
+  </div>
+  <img class="card-img-top" src="<%= image_url(@book.cover) %>">
+  <div class="card-body">
+    <h5 class="card-title">
+      <%= @book.title %>
+    </h5>
+    <p class="card-text">
+      <%= @book.description %>
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    Kulcsszavak:
+    <%= @book.keywords.map(&:value).join(" ")%>
+  </div>
+</div>
