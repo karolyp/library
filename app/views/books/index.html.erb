@@ -1,10 +1,16 @@
 <div class="card-columns" style="column-count: 4; margin-top:10px">
   <% @books.each do |book| %>
-    <div class="card" style="min-height: 220px">
+    <div class="card bg-light text-dark" style="min-height: 550px">
+      <div class="card-header">
+        <%= book.title %>
+      </div>
+      <img src="<%= image_url(book.cover) %>" class="card-img-top cover"/>
       <div class="card-body">
-        <div class="card-title"><%= book.title %></div>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <%= book.authors.map(&:name).join(", ")%>
+        </h6>
         <p class="card-text"><%= book.description.size > @max_description_length ? (book.description[0..@max_description_length - 1] + '...').capitalize : book.description.capitalize %></p>
+        <%= link_to t('books.next'), '#', class:'btn btn-primary' %>
       </div>
     </div>
   <% end %>

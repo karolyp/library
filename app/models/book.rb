@@ -1,7 +1,3 @@
 class Book < ApplicationRecord
-
-  def index
-    @books = Book.all
-  end
-
+  has_and_belongs_to_many :authors
 end

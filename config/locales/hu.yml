@@ -12,3 +12,5 @@ hu:
       log_out: "Kijelentkezés"
       log_in: "Bejelentkezés"
       sign_up: "Regisztráció"
+  books:
+    next: "Tovább"
