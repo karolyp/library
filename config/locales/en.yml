@@ -43,3 +43,11 @@ en:
       log_out: "Sign out"
       log_in: "Sign in"
       sign_up: "Sign up"
+  book:
+    rating:
+      written_by: ""
+  books:
+    rating:
+      already_rated: ""
+      login_to_rate: ""
+      rate_book: ""

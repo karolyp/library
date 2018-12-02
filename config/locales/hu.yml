@@ -1,4 +1,6 @@
 hu:
+  article_vowel: 'az'
+  article_consonant: 'a'
   menu:
     app_name: "Online könytár"
     books: "Könyvek"
@@ -16,7 +18,17 @@ hu:
     next: "Tovább"
     book:
       details: "Adatlap"
-      ratings: "Értékelések"
-      rental: "Kölcsönzés"
       next: "Következő"
       previous: "Előző"
+    rating:
+      plural: "Értékelések"
+      book_title_ratings: "című könyv értékelései"
+      already_rated: "Te már értékelted ezt a könyvet!"
+      login_to_rate: "Az értékeléshez lépj be!"
+      rate_book: "Értékeld ezt a könyvet!"
+    rental:
+      singular: "Kölcsönzés"
+  book:
+    rating:
+      written_by: "írta"
+

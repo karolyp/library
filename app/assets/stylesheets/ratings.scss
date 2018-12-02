@@ -1,0 +1,29 @@
+// Place all the styles related to the ratings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.card {
+  padding-top: 10px;
+}
+
+.rating-stars {
+  margin-bottom: 5px;
+}
+
+.checked {
+  color: #FFA500;
+}
+
+.title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.back-button {
+  margin-top: 10px;
+}
+
+.rate {
+  width: 50%;
+  margin: auto;
+  padding-top: 15px;
+}

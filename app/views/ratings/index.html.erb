@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <h3 class="title">
+    <%= vowel_or_consonant(@book.title).capitalize %>
+    '<%= @book.title.strip + '\' ' + t('books.rating.book_title_ratings')%>
+  </h3>
+  <% @ratings.each do |rating| %>
+    <div class="card">
+      <div class="card-header">
+        <div class="left">
+          <%= rating.user.try(:email) + ' ' + t('book.rating.written_by') %>
+        </div>
+        <div class="right">
+          <%= rating.try(:date) %>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="rating-stars">
+          <% 5.times do |i| %>
+            <span class="fa fa-star fa-lg <%= (i < rating.star_rating) && 'checked' %>"></span>
+          <% end %>
+        </div>
+        <p class="card-text">
+          <%= rating.text_rating %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="rate">
+    <% if current_user %>
+      <% if @ratings.map(&:user).include?(current_user) %>
+        <div class="alert alert-primary text-center" role="alert">
+          <%= t('books.rating.already_rated') %>
+        </div>
+      <% else %>
+        <%= t('books.rating.rate_book') %>
+      <% end %>
+    <% else %>
+      <div class="alert alert-primary text-center" role="alert">
+        <%= t('books.rating.login_to_rate') %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to 'Vissza a könyvhöz', book_path(@book), class: 'btn btn-primary back-button' %>
+</div>
+

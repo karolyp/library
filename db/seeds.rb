@@ -105,7 +105,9 @@ books.each do |book|
 
 
   users.shuffle[0, rand(3..5)].each do |user|
-    r = Rating.create(text_rating: Faker::Lorem.sentences(rand(3..4)).join(" "), star_rating: rand(1..5));
+    rating_text = []
+    rand(2..3).times {rating_text.push(Faker::Hacker.say_something_smart)}
+    r = Rating.create(text_rating: rating_text.join(" "), star_rating: rand(1..5), date: Time.at(rand(2.years).seconds.ago))
     user.ratings << r
     book.ratings << r
   end
