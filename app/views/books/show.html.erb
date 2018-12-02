@@ -1,50 +1,22 @@
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <%= link_to t('books.book.details'), nil, class: 'nav-link active' %>
-  </li>
-  <li class="nav-item">
-    <%= link_to t('books.book.ratings'), '#', class: 'nav-link' %>
-  </li>
-  <li class="nav-item">
-    <%= link_to t('books.book.rental'), '#', class: ['nav-link', !current_user && 'disabled'] %> <%# one-liner Ruby kokk %>
-  </li>
-</ul>
-
-<div class="container">
-  <div>
-    </button>
-    <% if !@previous_book.nil? %>
-      <%= link_to book_path(@previous_book), class: 'btn btn-secondary' do %>
-        <i class="fas fa-arrow-circle-left"></i>
-        <%= t('books.book.previous') %>
-      <% end %>    <% end %>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="true">
+      <%= t('books.book.details') %>
+    </a>
+    <a class="nav-item nav-link" id="ratings-tab" data-toggle="tab" href="#ratings" role="tab" aria-controls="ratings" aria-selected="false">
+      <%= t('books.book.ratings') %>
+    </a>
+    <a class="nav-item nav-link" id="rentals-tab" data-toggle="tab" href="#rentals" role="tab" aria-controls="rentals" aria-selected="false">
+      <%= t('books.book.rental') %>
+    </a>
   </div>
- <div class="book-details">
-   <div class="card text-center">
-     <div class="card-header">
-       <%= @book.authors.map(&:name).join(", ") %>
-     </div>
-     <img class="card-img-top" src="<%= image_url(@book.cover) %>">
-     <div class="card-body">
-       <h5 class="card-title">
-         <%= @book.title %>
-       </h5>
-       <p class="card-text">
-         <%= @book.description %>
-       </p>
-     </div>
-     <div class="card-footer text-muted">
-       Kulcsszavak:
-       <%= @book.keywords.map(&:value).join(" ") %>
-     </div>
-   </div>
- </div>
-  <div>
-    <% if !@next_book.nil? %>
-      <%= link_to book_path(@next_book), class: 'btn btn-secondary' do %>
-        <%= t('books.book.next') %>
-        <i class="fas fa-arrow-circle-right"></i>
-      <% end %>
-    <% end %>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+    <%= render 'book' %>
   </div>
+  <div class="tab-pane fade" id="ratings" role="tabpanel" aria-labelledby="ratings-tab">
+    <%= render 'ratings' %>
+  </div>
+  <div class="tab-pane fade" id="rentals" role="tabpanel" aria-labelledby="rentals-tab">gfd</div>
 </div>

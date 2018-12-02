@@ -19,4 +19,9 @@
 .container {
   display: flex;
   padding-top: 10px;
+  width: 50%;
+  .container-title {
+    text-align: center;
+  }
+
 }

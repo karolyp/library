@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text_rating: MyText
+  star_rating: 9.99
+  book: one
+
+two:
+  text_rating: MyText
+  star_rating: 9.99
+  book: two

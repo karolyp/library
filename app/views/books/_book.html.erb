@@ -1,0 +1,38 @@
+<div class="container">
+  <div>
+    <% if !@previous_book.nil? %>
+      <%= link_to book_path(@previous_book), class: 'btn btn-secondary' do %>
+        <i class="fas fa-arrow-circle-left"></i>
+        <%= t('books.book.previous') %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="book-details">
+    <div class="card text-center">
+      <div class="card-header">
+        <%= @book.authors.map(&:name).join(", ") %>
+      </div>
+      <img class="card-img-top" src="<%= image_url(@book.cover) %>">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= @book.title %>
+        </h5>
+        <p class="card-text">
+          <%= @book.description %>
+        </p>
+      </div>
+      <div class="card-footer text-muted">
+        Kulcsszavak:
+        <%= @book.keywords.map(&:value).join(" ") %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <% if !@next_book.nil? %>
+      <%= link_to book_path(@next_book), class: 'btn btn-secondary' do %>
+        <%= t('books.book.next') %>
+        <i class="fas fa-arrow-circle-right"></i>
+      <% end %>
+    <% end %>
+  </div>
+</div>
