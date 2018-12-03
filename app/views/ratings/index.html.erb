@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h3 class="title">
     <%= vowel_or_consonant(@book.title).capitalize %>
-    '<%= @book.title.strip + '\' ' + t('books.rating.book_title_ratings')%>
+    '<%= @book.title.strip + '\' ' + t('books.rating.book_title_ratings') %>
   </h3>
   <% @ratings.each do |rating| %>
     <div class="card">
@@ -33,7 +33,14 @@
           <%= t('books.rating.already_rated') %>
         </div>
       <% else %>
-        <%= t('books.rating.rate_book') %>
+        <div class="rate-title">
+          <h5><%= t('books.rating.rate_book') %></h5>
+        </div>
+        <%= bootstrap_form_for(@rating, url: book_ratings_path, method: :post) do |f| %>
+          <%= f.text_area :text_rating, rows: 3, label: 'Szöveges értékelés' %>
+          <%= f.select :star_rating, 1..5, {label: 'Csillagok'} %>
+          <%= f.primary 'Küldés' %>
+        <% end %>
       <% end %>
     <% else %>
       <div class="alert alert-primary text-center" role="alert">

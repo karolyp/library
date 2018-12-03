@@ -8,7 +8,7 @@ hu:
     search: "Keresés.."
     search_btn: "Keresés"
     profile:
-      my_profile: "Profilom"
+      my_profile: "profilja"
       my_profile_edit: "Profilom szerkesztése"
       my_profile_view: "Profilom megtekintése"
       log_out: "Kijelentkezés"
@@ -26,6 +26,7 @@ hu:
       already_rated: "Te már értékelted ezt a könyvet!"
       login_to_rate: "Az értékeléshez lépj be!"
       rate_book: "Értékeld ezt a könyvet!"
+      text_rating: "Szöveges értékelés"
     rental:
       singular: "Kölcsönzés"
   book:

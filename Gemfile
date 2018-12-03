@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'devise-i18n'
 gem 'database_cleaner'
 gem 'faker'
+gem "bootstrap_form", ">= 4.0.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

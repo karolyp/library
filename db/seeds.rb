@@ -13,7 +13,7 @@ users = []
   mail = Faker::Internet.free_email
   users.push(User.create(:email => mail, :password => mail, :password_confirmation => mail))
 end
-users.push((User.create(:email => 'karoly@pakozdi', :password => 'karoly@pakozdi', :password_confirmation => 'karoly@pakozdi')))
+User.create(:email => 'karoly@pakozdi', :password => 'karoly@pakozdi', :password_confirmation => 'karoly@pakozdi')
 
 # AUTHORS
 arpadk = Author.create(name: 'Kurusa Árpád')

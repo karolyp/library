@@ -5,5 +5,8 @@ Rails.application.routes.draw do
     resources :ratings
   end
 
+  get '/search' => 'search#search'
+
+
   root 'home#home'
 end
