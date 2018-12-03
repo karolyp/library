@@ -30,9 +30,9 @@
         <% end %>
       </li>
       <li>
-        <%= form_tag '#', class: 'form-inline my-2 my-lg-0' do %>
-          <%= search_field_tag 'search', nil, class: 'form-control mr-sm-2', placeholder: t('menu.search'), aria: {label: t('menu.search')} %>
-          <%= button_tag t('menu.search_btn'), class: 'btn btn-outline-success my-2 my-sm-0' %>
+        <%= form_tag '/search', class: 'form-inline my-2 my-lg-0', method: :get, enforce_utf8: false do %>
+          <%= search_field_tag 'search', nil, class: 'form-control mr-sm-2', placeholder: t('menu.search'), aria: {label: t('menu.search')}, name: 'q' %>
+          <%= submit_tag t('menu.search_btn'), class: 'btn btn-outline-success my-2 my-sm-0', name: nil %>
         <% end %>
       </li>
     </ul>
